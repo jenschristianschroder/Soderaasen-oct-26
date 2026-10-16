@@ -1,7 +1,7 @@
 'use strict';
 (()=>{
 const E=TripEngine,D=TRIP_DATA,$=id=>document.getElementById(id),CACHE='soderasen-2026-10-18-forecast-v1';
-const cfg={mode:'bridge',start:570,speed:6,breaks:45,deadline:1050,earliest:360,bridge:110,ferry:145,prep:15,pack:15,buffer:20};
+const cfg={mode:'bridge',start:570,speed:6,breaks:45,deadline:1050,earliest:360,bridge:100,ferry:145,prep:15,pack:15,buffer:20};
 let active={...D.snapshot,kind:'snapshot'},latest=active,selected=0,source='auto',refreshState='',map=null,group=null,cursor=null,routeOnly=false,lastOptimization=null;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dur=n=>{n=Math.round(n);return `${Math.floor(n/60)} h ${String(n%60).padStart(2,'0')}`;};

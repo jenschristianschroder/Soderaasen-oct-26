@@ -8,13 +8,13 @@ The planner opens with the requested 09:30 trail start and 6 km/h base walking p
 
 | Event | CEST |
 | --- | --- |
-| Leave Kastrup via the Øresund Bridge | 07:25 |
+| Leave Kastrup via the Øresund Bridge | 07:35 |
 | Arrive at Skäralid | 09:15 |
 | Start hiking | 09:30 |
 | Final third begins | 12:51 |
 | Finish the loop | 14:02 |
 | Leave the park | 14:17 |
-| Home, including 20-minute contingency | 16:27 |
+| Home, including 20-minute contingency | 16:17 |
 
 These times are estimates. The page recomputes them from controls and the selected weather source. At the default pace and start time, the ferry option gives an estimated 06:50 departure and 17:02 return, including contingency. A 6 km/h base pace is ambitious on uneven trails; lower it if the terrain slows you down. Travel estimates are not traffic or ferry booking data.
 
