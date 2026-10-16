@@ -2,21 +2,21 @@
 
 An interactive, static hiking planner for two friends travelling from Dollerupvej 7, Kastrup to Skäralid and back. Built for GitHub Pages, with no backend or API key.
 
-## Suggested day
+## Default day
 
-Based on the saved Open-Meteo forecast retrieved on 16 October 2026, with a 4 km/h base pace, ascent allowance and 45 minutes of breaks:
+The planner opens with the requested 09:30 trail start and 6 km/h base walking pace, plus ascent allowance and 45 minutes of breaks. The optimizer runs only when you press its button; opening the page or refreshing weather preserves these defaults.
 
 | Event | CEST |
 | --- | --- |
-| Leave Kastrup via the Øresund Bridge | 06:10 |
-| Arrive at Skäralid | 08:00 |
-| Start hiking | 08:15 |
-| Final third begins | 12:33 |
-| Finish the loop | 14:14 |
-| Leave the park | 14:29 |
-| Home, including 20-minute contingency | 16:39 |
+| Leave Kastrup via the Øresund Bridge | 07:25 |
+| Arrive at Skäralid | 09:15 |
+| Start hiking | 09:30 |
+| Final third begins | 12:51 |
+| Finish the loop | 14:02 |
+| Leave the park | 14:17 |
+| Home, including 20-minute contingency | 16:27 |
 
-These times are estimates. The page recomputes them from controls and the selected weather source. At the default pace, the ferry cannot fit both an earliest departure of 06:00 and a 17:30 return deadline; change either limit and optimize again. Travel estimates are not traffic or ferry booking data.
+These times are estimates. The page recomputes them from controls and the selected weather source. At the default pace and start time, the ferry option gives an estimated 06:50 departure and 17:02 return, including contingency. A 6 km/h base pace is ambitious on uneven trails; lower it if the terrain slows you down. Travel estimates are not traffic or ferry booking data.
 
 ## Features
 

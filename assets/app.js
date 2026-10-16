@@ -1,7 +1,7 @@
 'use strict';
 (()=>{
 const E=TripEngine,D=TRIP_DATA,$=id=>document.getElementById(id),CACHE='soderasen-2026-10-18-forecast-v1';
-const cfg={mode:'bridge',start:540,speed:4,breaks:45,deadline:1050,earliest:360,bridge:110,ferry:145,prep:15,pack:15,buffer:20};
+const cfg={mode:'bridge',start:570,speed:6,breaks:45,deadline:1050,earliest:360,bridge:110,ferry:145,prep:15,pack:15,buffer:20};
 let active={...D.snapshot,kind:'snapshot'},latest=active,selected=0,source='auto',refreshState='',map=null,group=null,cursor=null,routeOnly=false,lastOptimization=null;
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const dur=n=>{n=Math.round(n);return `${Math.floor(n/60)} h ${String(n%60).padStart(2,'0')}`;};
@@ -43,5 +43,5 @@ for(const id of ['start','speed','breaks','deadline','earliest','bridge','ferry'
 for(const mode of ['bridge','ferry'])$(mode+'-mode').addEventListener('click',()=>{cfg.mode=mode;lastOptimization=null;render();});
 $('position').addEventListener('input',()=>{selected=Number($('position').value)/1000;renderPosition();});$('optimize').addEventListener('click',optimize);$('refresh-weather').addEventListener('click',refresh);$('weather-source').addEventListener('change',()=>{source=$('weather-source').value;lastOptimization=null;render();});$('print').addEventListener('click',()=>window.print());$('toggle-map').addEventListener('click',()=>{routeOnly=!routeOnly;if(map){map.remove();map=null;group=null;cursor=null;}$('map').innerHTML='';$('toggle-map').textContent=routeOnly?'Show map tiles':'Route-only view';renderMap();renderPosition();});
 try{const cached=JSON.parse(localStorage.getItem(CACHE));if(E.validForecast(cached)&&new Date(cached.fetchedAt)>new Date(latest.fetchedAt)&&new Date(cached.fetchedAt)<=new Date())latest={...cached,kind:'snapshot'};}catch{}
-optimize();refresh();setInterval(()=>{if(!document.hidden)refresh();},30*60*1000);
+render();refresh();setInterval(()=>{if(!document.hidden)refresh();},30*60*1000);
 })();
